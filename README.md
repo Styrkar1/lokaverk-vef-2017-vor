@@ -1,6 +1,5 @@
 velkominn til github
 
-verkefni mitt
-(er það rétt?)
+verkefnið mitt
 
 Oh my god do i try.
