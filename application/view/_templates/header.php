@@ -20,7 +20,7 @@
     <!-- navigation -->
     <div class="navigation">
         <a href="<?php echo URL; ?>">home</a>
-        <a href="<?php echo URL; ?>home/exampleone">home/exampleone</a>
-        <a href="<?php echo URL; ?>home/exampletwo">home/exampletwo</a>
-        <a href="<?php echo URL; ?>songs">songs</a>
+        <a href="<?php echo URL; ?>home/login">the log in</a>
+        <a href="<?php echo URL; ?>home/adindex">the index</a>
+        <a href="<?php echo URL; ?>songs">*not used*</a>
     </div>

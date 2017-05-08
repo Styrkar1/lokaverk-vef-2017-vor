@@ -4,7 +4,7 @@
 //if not logged in redirect to login page
 //if(!$user->is_logged_in()){ header('Location: login.php'); }
 //show message from add / edit page
-try {
+/*try {
 $db = new PDO('mysql:host='.DB_HOST.';port=8889;dbname='.DB_NAME, DB_USER, DB_PASS);
 $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 echo "connection established";
@@ -12,7 +12,7 @@ echo "connection established";
  catch (Exception $e) {
 echo "Connection failed: " . $e->GetMessage();
 }
-
+*/
 if(isset($_GET['delpost'])){ 
 	$stmt = $db->prepare('DELETE FROM blog_posts WHERE postID = :postID') ;
 	$stmt->execute(array(':postID' => $_GET['delpost']));
@@ -44,7 +44,7 @@ if(isset($_GET['delpost'])){
 	<?php include('menu.php');?>
 
 	<?php 
-	//show message from add / edit page
+	
 	if(isset($_GET['action'])){ 
 		echo '<h3>Post '.$_GET['action'].'.</h3>'; 
 	} 

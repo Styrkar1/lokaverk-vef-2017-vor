@@ -1,4 +1,4 @@
-<?php //include config
+<?php 
 require_once('../application/config/config.php');
 //if not logged in redirect to login page
 //if(!$user->is_logged_in()){ header('Location: login.php'); }
@@ -47,7 +47,7 @@ require_once('../application/config/config.php');
 		}
 		if(!isset($error)){
 			try {
-				//insert into database
+				
 				$stmt = $db->prepare('INSERT INTO blog_posts (postTitle,postDesc,postCont,postDate) VALUES (:postTitle, :postDesc, :postCont, :postDate)') ;
 				$stmt->execute(array(
 					':postTitle' => $postTitle,

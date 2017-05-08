@@ -34,12 +34,12 @@ require_once('../../config/config.php');
 
 
 	<?php
-	//if form has been submitted process it
+	
 	if(isset($_POST['submit'])){
 		$_POST = array_map( 'stripslashes', $_POST );
-		//collect form data
+		
 		extract($_POST);
-		//very basic validation
+		
 		if($postID ==''){
 			$error[] = 'This post is missing a valid id!.';
 		}
@@ -54,7 +54,7 @@ require_once('../../config/config.php');
 		}
 		if(!isset($error)){
 			try {
-				//insert into database
+				
 				$stmt = $db->prepare('UPDATE blog_posts SET postTitle = :postTitle, postDesc = :postDesc, postCont = :postCont WHERE postID = :postID') ;
 				$stmt->execute(array(
 					':postTitle' => $postTitle,
@@ -62,7 +62,7 @@ require_once('../../config/config.php');
 					':postCont' => $postCont,
 					':postID' => $postID
 				));
-				//redirect to index page
+				
 				header('Location: index.php?action=updated');
 				exit;
 			} catch(PDOException $e) {
@@ -74,7 +74,7 @@ require_once('../../config/config.php');
 
 
 	<?php
-	//check for any errors
+	
 	if(isset($error)){
 		foreach($error as $error){
 			echo $error.'<br />';

@@ -4,7 +4,7 @@
 
 //define('__ROOT__', dirname(dirname(__FILE__))); 
 //require_once(__ROOT__.'/config.php'); 
-try {
+/*try {
 $db = new PDO('mysql:host='.DB_HOST.';port=8889;dbname='.DB_NAME, DB_USER, DB_PASS);
 $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 echo "connection established";
@@ -12,7 +12,7 @@ echo "connection established";
  catch (Exception $e) {
 echo "Connection failed: " . $e->GetMessage();
 }
-
+*/
 //if not logged in redirect to login page
 //if(!$user->is_logged_in()){ header('Location: login.php'); }
 ?>
@@ -24,7 +24,6 @@ echo "Connection failed: " . $e->GetMessage();
 </form>
 
 <?php
-//process login form if submitted
 if(isset($_POST['submit'])){
 
     $username = trim($_POST['username']);
@@ -32,7 +31,6 @@ if(isset($_POST['submit'])){
     
     if($user->login($username,$password)){ 
 
-        //logged in return to index page
         header('Location: index.php');
         exit;
     
@@ -41,7 +39,7 @@ if(isset($_POST['submit'])){
         $message = '<p class="error">Wrong username or password</p>';
     }
 
-}//end if submit
+}
 
 if(isset($message)){ echo $message; }
 ?>
