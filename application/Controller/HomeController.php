@@ -79,11 +79,6 @@ class HomeController
         require APP . 'view/_templates/footer.php';
     }
 
-    public function adindex()
-    {
-        require APP . 'view/_templates/header.php';
-        require APP . 'view/home/adindex.php';
-        require APP . 'view/_templates/footer.php';
-    }
+
 
 }

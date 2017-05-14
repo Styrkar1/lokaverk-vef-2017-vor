@@ -55,19 +55,9 @@ define('URL', URL_PROTOCOL . URL_DOMAIN . URL_SUB_FOLDER);
  * This is the place where you define your database credentials, database type etc.
  */
 define('DB_TYPE', 'mysql');
-define('DB_HOST', 'tsuts.tskoli.is');
-define('DB_NAME', '0501983759_blog');
-define('DB_USER', '0501983759');
-define('DB_PASS', 'mypassword');
+define('DB_HOST', 'localhost');
+define('DB_NAME', 'blog');
+define('DB_USER', 'root');
+define('DB_PASS', '12345678');
 define('DB_CHARSET', 'utf8');
-
-/*try {
-$db = new PDO('mysql:host='.DB_HOST.';port=8889;dbname='.DB_NAME, DB_USER, DB_PASS);
-$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-echo "connection established";
-}
- catch (Exception $e) {
-echo "Connection failed: " . $e->GetMessage();
-}
-*/
 ?>
